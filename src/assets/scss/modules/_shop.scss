@@ -143,3 +143,194 @@
     color: #191c1f;
   }
 }
+
+
+/* ================= BRAND FILTER ================= */
+
+.brand-filter {
+  padding: 32px 0;
+
+  border-top: 1px solid #e4e7e9;
+}
+
+.brand-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px 24px;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  span {
+    font-size: 14px;
+
+    color: #475156;
+  }
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+
+  border: 1px solid #c9cfd2;
+
+  position: relative;
+}
+
+.brand-item input:checked + .checkmark {
+  background: #fa8232;
+
+  border-color: #fa8232;
+
+  &::after {
+    content: '✓';
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+
+    font-size: 12px;
+  }
+}
+
+/* ================= TAG FILTER ================= */
+
+.tag-filter {
+  padding: 32px 0;
+
+  border-top: 1px solid #e4e7e9;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  button {
+    height: 34px;
+
+    padding: 0 14px;
+
+    border: 1px solid #e4e7e9;
+
+    background: #fff;
+
+    font-size: 14px;
+
+    color: #475156;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      border-color: #fa8232;
+
+      color: #fa8232;
+    }
+  }
+}
+
+/* ================= SIDEBAR PROMO ================= */
+
+.sidebar-promo {
+  margin-top: 32px;
+
+  border: 1px solid #f7d8c2;
+
+  padding: 24px;
+
+  text-align: center;
+
+  img {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    font-size: 34px;
+
+    font-weight: 700;
+
+    margin-bottom: 0;
+  }
+
+  span {
+    color: #ee5858;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+  }
+
+  h3 {
+    font-size: 32px;
+
+    line-height: 42px;
+
+    margin: 20px 0;
+  }
+}
+
+.promo-price {
+  margin-bottom: 24px;
+
+  font-size: 14px;
+
+  strong {
+    background: #f3de6d;
+
+    padding: 8px 14px;
+
+    margin-left: 8px;
+  }
+}
+
+.add-cart-btn {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+
+  background: #fa8232;
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 14px;
+}
+
+.details-btn {
+  width: 100%;
+  height: 48px;
+
+  border: 1px solid #fa8232;
+
+  background: transparent;
+
+  color: #fa8232;
+
+  font-size: 14px;
+  font-weight: 600;
+}

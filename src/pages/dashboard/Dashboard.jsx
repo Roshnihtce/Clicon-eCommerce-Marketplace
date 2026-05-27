@@ -15,41 +15,40 @@ import TopProducts from '../../components/home/Products/TopProducts'
 import LatestNews from '../../components/home/News/LatestNews'
 import Newsletter from '../../components/home/Newsletter/Newsletter'
 import ShopBreadcrumb from '../../components/shop/ShopBreadcrumb'
+import TopBanner from '../../components/layout/TopBanner'
 
-
-
-// import LatestNews from '../../components/home/News/LatestNews'
-
-// import Newsletter from '../../components/home/Newsletter/Newsletter'
 
 export default function Dashboard() {
   return (
-    <MainLayout>
-      <ShopBreadcrumb />
-      <HeroSection />
-
-       
-
-      <ServiceFeatures />
-
-      <BestDeals /> 
-
-      <ShopCategories />
+    <>
+      <TopBanner />
+      <MainLayout>
+        <ShopBreadcrumb />
+        <HeroSection />
 
 
-      <FeaturedProducts />
 
-      <PromoSection/>
+        <ServiceFeatures />
 
-      <CategoryShowcase/>
+        <BestDeals />
 
-      <MacbookBanner/>
+        <ShopCategories />
 
-      <TopProducts/>
 
-      <LatestNews />
+        <FeaturedProducts />
 
-      <Newsletter /> 
-    </MainLayout>
+        <PromoSection />
+
+        <CategoryShowcase />
+
+        <MacbookBanner />
+
+        <TopProducts />
+
+        <LatestNews />
+
+        <Newsletter />
+      </MainLayout>
+    </>
   )
 }

@@ -1,10 +1,26 @@
-import CategoryFilter from "./filters/CategoryFilter";
+import CategoryFilter from './filters/CategoryFilter'
 
+import PriceFilter from './filters/PriceFilter'
+
+import BrandFilter from './filters/BrandFilter'
+
+import TagFilter from './filters/TagFilter'
+
+import SidebarPromo from './promo/SidebarPromo'
 
 export default function ShopSidebar() {
   return (
     <aside className="shop-sidebar">
-      <CategoryFilter/>
+      <CategoryFilter />
+
+      <PriceFilter />
+
+      <BrandFilter />
+
+      <TagFilter />
+
+      <SidebarPromo />
+      
       
     </aside>
   )

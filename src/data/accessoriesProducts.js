@@ -1,18 +1,18 @@
-import headphone1 from '../assets/images/headphone1.webp'
+import headphone1 from '../assets/images/Headphone4.webp'
 
 import headphone2 from '../assets/images/Headphone1.webp'
 
-import keyboard from '../assets/images/Accessories.webp'
+import keyboard from '../assets/images/accessories.webp'
 
-import printer from '../assets/images/Headphone1.webp'
+import printer from '../assets/images/printer2.webp'
 
 import camera from '../assets/images/Bluetooth.webp'
 
-import webcam from '../assets/images/Headphone1.webp'
+import webcam from '../assets/images/flashsale1.webp'
 
-import printerWhite from '../assets/images/Headphone1.webp'
+import printerWhite from '../assets/images/flashsale4.webp'
 
-import washing from '../assets/images/Wishing.webp'
+import washing from '../assets/images/washing-machine.webp'
 
 const accessoriesProducts = [
   {

@@ -1,24 +1,24 @@
-import earbuds from '../assets/images/SmartPhone.webp'
+import phone from '../assets/images/SmartPhone3.webp'
 
 import samsungPhone from '../assets/images/Phones2.webp'
 
-import airCondition from '../assets/images/UHDLED.webp'
+import airCondition from '../assets/images/ac.webp'
 
 import headphone from '../assets/images/headphone1.webp'
 
 import drone from '../assets/images/Wishing.webp'
 
-import smartTv from '../assets/images/Monitor.webp'
+import smartTv from '../assets/images/TV.webp'
 
-import desktopMonitor from '../assets/images/Monitor.webp'
+import desktopMonitor from '../assets/images/monitor4.webp'
 
-import mobile from '../assets/images/Bluetooth.webp'
+import mobile from '../assets/images/Smartphone.webp'
 
 const featuredProducts = [
   {
     id: 1,
 
-    image: earbuds,
+    image: phone,
 
     title:
       'TOZO T6 True Wireless Earbuds Bluetooth Headphones',

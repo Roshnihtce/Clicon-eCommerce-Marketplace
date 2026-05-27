@@ -6,7 +6,7 @@ import product5 from '../assets/images/headphone1.webp'
 import product6 from '../assets/images/Phones2.webp'
 import product7 from '../assets/images/Wishing.webp'
 import product8 from '../assets/images/Monitor.webp'
-import product9 from '../assets/images/Monitor.webp'
+import product9 from '../assets/images/Bluetooth.webp'
 
 
 const bestDeals = [
@@ -89,7 +89,7 @@ const bestDeals = [
 
   {
     id: 9,
-    image: product8,
+    image: product9,
     title:
       'JBL FLIP 4 Waterproof Portable Speaker',
     price: '$250',

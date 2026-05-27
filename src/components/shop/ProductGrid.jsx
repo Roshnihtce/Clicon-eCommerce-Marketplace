@@ -1,12 +1,12 @@
 import { Row, Col } from 'react-bootstrap'
 
-
-import ProductCard from '../Home/Products/ProductCard'
 import shopProducts from '../../data/shopProducts'
+
+import ProductCard from './ProductCard'
 
 export default function ProductGrid() {
   return (
-    <Row className="g-0">
+    <Row className="g-3">
       {shopProducts.map((product) => (
         <Col
           key={product.id}

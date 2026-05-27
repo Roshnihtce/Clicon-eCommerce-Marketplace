@@ -1,4 +1,4 @@
-const popularTags = [
+  const popularTags = [
   'Game',
   'iPhone',
   'TV',
@@ -14,4 +14,4 @@ const popularTags = [
   'Samsung',
 ]
 
-export default popularTags      
+export default popularTags

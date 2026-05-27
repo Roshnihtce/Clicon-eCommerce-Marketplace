@@ -1,3 +1,5 @@
+@use '../theme/variables' as *;
+@use '../theme/typography' as *;
 .popular-filter {
   .filter-title {
     font-size: 14px;

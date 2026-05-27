@@ -126,3 +126,229 @@
     border-radius: $radius-sm;
   }
 }
+
+.main-banner {
+  background: #f2f4f5;
+
+  border-radius: 12px;
+
+  padding: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ================= LEFT ================= */
+
+.banner-content {
+  max-width: 520px;
+
+  .banner-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #2da5f3;
+
+    position: relative;
+
+    padding-left: 48px;
+
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    &::before {
+      content: '';
+
+      width: 32px;
+      height: 2px;
+
+      background: #2da5f3;
+
+      position: absolute;
+
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 700;
+
+    line-height: 80px;
+
+    color: #191c1f;
+
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 24px;
+
+    line-height: 36px;
+
+    color: #5f6c72;
+
+    margin-bottom: 40px;
+  }
+}
+
+/* BUTTON */
+
+.banner-btn {
+  width: 190px;
+  height: 56px;
+
+  background: #fa8232;
+
+  color: #fff;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    background: #f97316;
+  }
+}
+
+/* DOTS */
+
+.banner-dots {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 72px;
+
+  span {
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #adb7bc;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    &.active {
+      width: 18px;
+      height: 18px;
+
+      background: #191c1f;
+    }
+  }
+}
+
+/* ================= RIGHT ================= */
+
+.banner-image {
+  position: relative;
+
+  img {
+    width: 420px;
+
+    object-fit: contain;
+  }
+}
+
+/* PRICE */
+
+.banner-price {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: #2da5f3;
+
+  border: 6px solid #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  position: absolute;
+
+  top: 20px;
+  right: -40px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .main-banner {
+    padding: 48px;
+  }
+
+  .banner-content h1 {
+    font-size: 56px;
+
+    line-height: 64px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-banner {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 48px;
+  }
+
+  .banner-content {
+    max-width: 100%;
+
+    .banner-subtitle {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .banner-btn {
+    margin: 0 auto;
+  }
+
+  .banner-dots {
+    justify-content: center;
+  }
+
+  .banner-image img {
+    width: 320px;
+  }
+
+  .banner-price {
+    width: 90px;
+    height: 90px;
+
+    font-size: 28px;
+  }
+}

@@ -1,8 +1,5 @@
 import ShopToolbar from './ShopToolbar'
-
 import ProductGrid from './ProductGrid'
-
-import ShopPagination from './ShopPagination'
 
 export default function ShopProducts() {
   return (
@@ -10,8 +7,6 @@ export default function ShopProducts() {
       <ShopToolbar />
 
       <ProductGrid />
-
-      <ShopPagination />
     </div>
   )
 }
