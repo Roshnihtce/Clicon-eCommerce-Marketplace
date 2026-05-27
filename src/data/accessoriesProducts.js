@@ -2,7 +2,7 @@ import headphone1 from '../assets/images/Headphone4.webp'
 
 import headphone2 from '../assets/images/headphone1.webp'
 
-import keyboard from '../assets/images/accessories.webp'
+import keyboard from '../assets/images/Accessories.webp'
 
 import printer from '../assets/images/printer2.webp'
 
