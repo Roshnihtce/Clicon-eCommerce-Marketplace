@@ -1,0 +1,110 @@
+// ================= FONT FAMILY =================
+
+$font-primary: 'Public Sans', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+
+
+// ================= FONT WEIGHT =================
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+
+
+// ================= FONT SIZES =================
+
+// Body Text
+$fs-12: 0.75rem;   // 12px
+$fs-14: 0.875rem;  // 14px
+$fs-16: 1rem;      // 16px
+$fs-18: 1.125rem;  // 18px
+$fs-20: 1.25rem;   // 20px
+$fs-22: 1.375rem;  // 22px
+$fs-24: 1.5rem;    // 24px
+$fs-32: 2rem;      // 32px
+$fs-40: 2.5rem;    // 40px
+$fs-48: 3rem;      // 48px
+
+
+
+// ================= LINE HEIGHT =================
+
+$lh-16: 1rem;      // 16px
+$lh-20: 1.25rem;   // 20px
+$lh-24: 1.5rem;    // 24px
+$lh-28: 1.75rem;   // 28px
+$lh-32: 2rem;      // 32px
+$lh-40: 2.5rem;    // 40px
+$lh-48: 3rem;      // 48px
+$lh-56: 3.5rem;    // 56px
+
+
+// ================= BODY TYPOGRAPHY =================
+
+// Small Text
+$body-small-size: $fs-14;
+$body-small-line: $lh-20;
+$body-small-weight: $fw-400;
+
+
+// Medium Text
+$body-medium-size: $fs-16;
+$body-medium-line: $lh-24;
+$body-medium-weight: $fw-400;
+
+
+// Large Text
+$body-large-size: $fs-18;
+$body-large-line: $lh-24;
+$body-large-weight: $fw-500;
+
+
+// XL Text
+$body-xl-size: $fs-20;
+$body-xl-line: $lh-28;
+$body-xl-weight: $fw-500;
+
+
+
+// ================= HEADINGS =================
+
+// Heading 1
+$heading-1-size: $fs-48;
+$heading-1-line: $lh-56;
+$heading-1-weight: $fw-700;
+
+
+// Heading 2
+$heading-2-size: $fs-40;
+$heading-2-line: $lh-48;
+$heading-2-weight: $fw-700;
+
+
+// Heading 3
+$heading-3-size: $fs-32;
+$heading-3-line: $lh-40;
+$heading-3-weight: $fw-600;
+
+
+// Heading 4
+$heading-4-size: $fs-24;
+$heading-4-line: $lh-32;
+$heading-4-weight: $fw-600;
+
+
+
+// ================= LABELS =================
+
+// Label Small
+$label-small-size: $fs-12;
+$label-small-line: $lh-16;
+$label-small-weight: $fw-500;
+
+
+// Label Medium
+$label-medium-size: $fs-14;
+$label-medium-line: $lh-20;
+$label-medium-weight: $fw-500;

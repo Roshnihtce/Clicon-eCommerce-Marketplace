@@ -1,0 +1,135 @@
+// ================= COLORS =================
+
+// Gray Colors
+$gray-50: #F2FAF5;
+$gray-100: #FFFFFF;
+$gray-300: #ADB7BC;
+$gray-400: #929FA5;
+$gray-500: #77878F;
+$gray-700: #475156;
+$gray-800: #303639;
+$gray-900: #191C1F;
+
+
+// Primary Colors
+$primary-100: #FFE7D6;
+$primary-200: #FFCEAD;
+$primary-500: #FA8232;
+
+
+// Secondary Colors
+$secondary-500: #2DA5F3;
+$secondary-600: #2484C2;
+$secondary-700: #1B6392;
+
+
+// Warning Colors
+$warning-200: #F7E99E;
+$warning-300: #F3DE6D;
+$warning-400: #EFD33D;
+$warning-500: #EBC805;
+
+// Danger Color
+$danger-500: #EE5858;
+
+
+// Success Color
+$success-500: #2DB224;
+
+
+// Extra Colors
+$custom-blue: #124261;
+
+
+// Common Colors
+$white: #FFFFFF;
+$black: #000000;
+
+
+
+// ================= BORDER RADIUS =================
+
+$radius-sm: 0.25rem;   // 4px
+$radius-md: 0.5rem;    // 8px
+$radius-lg: 0.75rem;   // 12px
+$radius-xl: 1rem;      // 16px
+
+
+
+// ================= SHADOW =================
+
+$shadow-sm: 0px 2px 8px rgba(0, 0, 0, 0.08);
+
+$shadow-md: 0px 4px 12px rgba(0, 0, 0, 0.10);
+
+$shadow-lg: 0px 8px 24px rgba(0, 0, 0, 0.12);
+
+
+
+// ================= SPACING =================
+
+$space-8: 0.5rem;      // 8px
+$space-12: 0.75rem;    // 12px
+$space-16: 1rem;       // 16px
+$space-24: 1.5rem;     // 24px
+$space-32: 2rem;       // 32px
+$space-40: 2.5rem;     // 40px
+$space-64: 4rem;       // 64px
+
+
+
+// ================= MARGIN =================
+
+$m-16: 1rem;           // 16px
+$m-20: 1.25rem;        // 20px
+$m-24: 1.5rem;         // 24px
+$m-26: 1.625rem;       // 26px
+$m-40: 2.5rem;         // 40px
+$m-72: 4.5rem;         // 72px
+$m-100: 6.25rem;       // 100px
+$m-176: 11rem;         // 176px
+$m-638: 39.875rem;     // 638px
+$m-748: 46.75rem;      // 748px
+
+
+
+// ================= PADDING =================
+
+$p-8: 0.5rem;          // 8px
+$p-12: 0.75rem;        // 12px
+$p-64: 4rem;           // 64px
+
+
+// ================= TRANSITION =================
+
+$transition: all 0.3s ease;
+
+
+
+// ================= CONTAINER =================
+
+$container-width: 1320px;
+
+
+
+// ================= BREAKPOINTS =================
+
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+
+
+// ================= Z-INDEX =================
+
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal: 1050;
+
+
+
+// ================= CURSOR =================
+
+$cursor-pointer: pointer;

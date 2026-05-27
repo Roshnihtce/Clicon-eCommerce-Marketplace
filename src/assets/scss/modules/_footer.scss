@@ -1,0 +1,289 @@
+@use '../theme/variables' as *;
+@use '../theme/typography' as *;
+
+.footer {
+  background: $gray-900;
+  overflow: hidden;
+}
+
+/* ================= FOOTER TOP ================= */
+
+.footer-top {
+  padding: 72px 0 30px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+/* ================= LOGO SECTION ================= */
+
+.footer-logo {
+  .logo {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    margin-bottom: 28px;
+
+    .logo-circle {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+
+      background: $primary-500;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: $black;
+
+      font-size: 18px;
+      font-weight: $fw-700;
+
+      flex-shrink: 0;
+    }
+
+    h2 {
+      margin: 0;
+
+      color: $white;
+
+      font-size: 32px;
+      font-weight: $fw-700;
+    }
+  }
+
+  p {
+    color: $gray-400;
+
+    margin-bottom: 10px;
+
+    font-size: $fs-14;
+  }
+
+  h4 {
+    color: $white;
+
+    font-size: $fs-14;
+    font-weight: $fw-600;
+
+    margin-bottom: 18px;
+  }
+
+  span {
+    display: block;
+
+    color: $gray-400;
+
+    line-height: 32px;
+
+    margin-bottom: 20px;
+
+    font-size: $fs-14;
+  }
+
+  a {
+    color: $gray-50;
+
+    font-size: $fs-16;
+    font-weight: $fw-500;
+
+    transition: $transition;
+
+    &:hover {
+      color: $primary-500;
+    }
+  }
+}
+
+/* ================= FOOTER LINKS ================= */
+
+.footer-links {
+  h5 {
+    color: $white;
+
+    font-size: 16px;
+    font-weight: $fw-600;
+
+    margin-bottom: 30px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      margin-bottom: 10px;
+
+      color: $gray-400;
+
+      font-size: $fs-14;
+
+      cursor: pointer;
+
+      transition: $transition;
+
+      &:hover {
+        color: $primary-500;
+
+        transform: translateX(4px);
+      }
+    }
+
+    .active {
+      color: $white;
+
+      position: relative;
+
+      padding-left: 10px;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+
+        left: 0;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: 10px;
+        height: 2px;
+
+        background: #efd33d;
+      }
+    }
+  }
+}
+
+/* ================= BROWSE PRODUCT ================= */
+
+.browse-product {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  color: $warning-500;
+
+  font-size: $fs-16;
+  font-weight: $fw-600;
+
+  cursor: pointer;
+
+  transition: $transition;
+
+  &:hover {
+    gap: 12px;
+  }
+}
+
+/* ================= APP BUTTON ================= */
+
+.app-btn {
+  width: 100%;
+  height: 72px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: #303639;
+
+  margin-bottom: 16px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  transition: $transition;
+
+  &:hover {
+    background: #3b4448;
+  }
+
+  img {
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+  }
+
+  .app-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+      color: $gray-300;
+
+      font-size: 12px;
+    }
+
+    h6 {
+      margin: 0;
+
+      color: $white;
+
+      font-size: 14px;
+      font-weight: $fw-600;
+    }
+  }
+}
+
+/* ================= TAGS ================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  span {
+    padding: 6px 6px;
+
+    border: 1px solid #303639;
+
+    border-radius: 4px;
+
+    color: $white;
+
+    font-size: $fs-14;
+
+    cursor: pointer;
+
+    transition: $transition;
+
+    &:hover {
+      border-color: $primary-500;
+
+      color: $primary-500;
+    }
+  }
+}
+
+/* ================= FOOTER BOTTOM ================= */
+
+.footer-bottom {
+  padding: 24px 0;
+
+  text-align: center;
+
+  p {
+    margin: 0;
+
+    color: $gray-400;
+
+    font-size: $fs-14;
+  }
+}

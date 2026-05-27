@@ -1,0 +1,78 @@
+@use '../theme/variables' as *;
+@use '../theme/typography' as *;
+
+.newsletter {
+    background: $secondary-700;
+}
+
+.newsletter-content {
+    max-width: 720px;
+}
+
+.newsletter-text {
+    max-width: 620px;
+
+    color: $white;
+
+    font-size: $fs-14;
+
+    line-height: 26px;
+}
+
+.newsletter-form {
+    max-width: 620px;
+    height: 72px;
+}
+
+.newsletter-btn {
+    height: 52px;
+    min-width: 170px;
+    background: $primary-500;
+
+    color: $white;
+
+    font-size: $fs-14;
+    font-weight: $fw-600;
+
+    border: none;
+    border-radius: 0 !important;
+}
+
+.newsletter-divider {
+    width: 420px;
+
+    height: 1px;
+
+    background: $gray-500;
+    margin: 35px auto 20px;
+}
+
+.newsletter-brands {
+    gap: 36px;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        height: 72px;
+
+        width: auto;
+
+        opacity: 0.7;
+
+        transition: 0.3s;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+
+            transform: scale(1.05);
+        }
+
+
+    }
+}

@@ -1,0 +1,381 @@
+@use '../theme/variables' as *;
+@use '../theme/typography' as *;
+
+.category-showcase {
+  padding: 72px 0;
+}
+
+/* ================= HEADER ================= */
+
+.showcase-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+
+    color: #191c1f;
+  }
+}
+
+.showcase-tabs {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+
+  button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: #5f6c72;
+
+    &.active {
+      color: #191c1f;
+
+      font-weight: 600;
+
+      border-bottom: 2px solid #fa8232;
+    }
+  }
+
+  .browse-btn {
+    color: #fa8232;
+
+    font-weight: 600;
+  }
+}
+
+// .showcase-sidebar {
+//   width: 100%;
+
+//   height: 100%;
+
+//   display: flex;
+//   flex-direction: column;
+
+//   gap: 20px;
+// }
+
+
+// .sidebar-card {
+//   flex: 1;
+
+//   width: 100%;
+
+//   padding: 32px 24px;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+
+//   text-align: center;
+
+//   overflow: hidden;
+// }
+
+// .yellow-card {
+//   background: #f2e58b;
+
+//   flex: 2;
+
+//   img {
+//     width: 170px;
+//     height: 170px;
+
+//     object-fit: contain;
+
+//     margin-bottom: 20px;
+//   }
+
+//   h3 {
+//     font-size: 32px;
+//     line-height: 44px;
+
+//     font-weight: 700;
+
+//     color: #191c1f;
+
+//     margin-bottom: 16px;
+//   }
+
+//   p {
+//     font-size: 16px;
+//     line-height: 28px;
+
+//     color: #5f6c72;
+
+//     margin-bottom: 22px;
+//   }
+
+//   .price-box {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+
+//     margin-bottom: 24px;
+
+//     strong {
+//       background: #fff;
+
+//       padding: 8px 14px;
+
+//       font-size: 24px;
+//       font-weight: 700;
+//     }
+//   }
+
+//   button {
+//     width: 100%;
+//     height: 56px;
+
+//     border: none;
+
+//     background: #fa8232;
+
+//     color: #fff;
+
+//     font-size: 16px;
+//     font-weight: 700;
+//   }
+// }
+
+// .blue-card {
+//   background: #124261;
+
+//   flex: 1;
+
+//   span {
+//     background: rgba(255, 255, 255, 0.1);
+
+//     padding: 8px 16px;
+
+//     color: #fff;
+
+//     font-size: 12px;
+//     font-weight: 600;
+
+//     margin-bottom: 20px;
+//   }
+
+//   h2 {
+//     font-size: 52px;
+//     line-height: 62px;
+
+//     color: #fff;
+
+//     font-weight: 700;
+
+//     margin-bottom: 14px;
+//   }
+
+//   p {
+//     color: #fff;
+
+//     font-size: 16px;
+
+//     margin-bottom: 24px;
+
+//     strong {
+//       color: #efd33d;
+//     }
+//   }
+
+//   button {
+//     width: 100%;
+//     height: 54px;
+
+//     border: none;
+
+//     background: #2da5f3;
+
+//     color: #fff;
+
+//     font-size: 15px;
+//     font-weight: 700;
+//   }
+// }
+
+.showcase-sidebar {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* ================= COMMON CARD ================= */
+
+.sidebar-card {
+  width: 100%;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  padding: 32px 24px;
+
+  text-align: center;
+}
+
+/* ================= PROMO CARD ================= */
+
+.sidebar-card.promo-card {
+  background: #f3e287;
+
+  height: 68%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 180px;
+
+    margin-bottom: 24px;
+
+    object-fit: contain;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 44px;
+
+    font-weight: 700;
+
+    color: #191c1f;
+
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
+
+    color: #5f6c72;
+
+    margin-bottom: 24px;
+  }
+
+  .price-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    font-size: 16px;
+
+    strong {
+      background: $white;
+
+      padding: 8px 14px;
+
+      font-size: 24px;
+      font-weight: 700;
+
+      color: #191c1f;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 56px;
+
+    border: none;
+
+    background: #fa8232;
+
+    color: $white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      background: #f36f1e;
+    }
+  }
+}
+
+/* ================= DISCOUNT CARD ================= */
+
+.sidebar-card.discount-card {
+  background: #124261;
+
+  height: 25%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 8px 16px;
+
+    color: $white;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 52px;
+    line-height: 62px;
+
+    font-weight: 700;
+
+    color: $white;
+
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: $white;
+
+    font-size: 16px;
+
+    margin-bottom: 24px;
+
+    strong {
+      color: #f3c94d;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 54px;
+
+    border: none;
+
+    background: #2da5f3;
+
+    color: $white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      background: #1d95e6;
+    }
+  }
+}

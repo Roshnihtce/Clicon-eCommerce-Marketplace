@@ -1,0 +1,60 @@
+// ================= THEME IMPORTS =================
+
+@use './theme/variables' as *;
+@use './theme/typography' as *;
+
+@use './modules/header';
+@use './modules/signin';
+@use './modules/footer';
+@use './modules/hero';
+@use './modules/services';
+@use './modules/products';
+@use './modules/categories';
+@use './modules/featured';
+@use './modules/promo';
+@use './modules/showcase';
+@use './modules/macbook-banner';
+@use './modules/top-products';
+@use './modules/latest-news';
+@use './modules/newsletter';
+@use './modules/shop';
+
+// ================= GLOBAL STYLES =================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $body-medium-size;
+  line-height: $body-medium-line;
+  font-weight: $body-medium-weight;
+  background-color: $gray-100;
+  color: $gray-900;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: $cursor-pointer;
+  transition: $transition;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+

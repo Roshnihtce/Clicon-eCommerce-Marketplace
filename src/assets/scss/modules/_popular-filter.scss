@@ -1,0 +1,107 @@
+.popular-filter {
+  .filter-title {
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #191c1f;
+
+    margin-bottom: 22px;
+  }
+
+  /* BRANDS */
+
+  .brands-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px 24px;
+  }
+
+  .brand-item {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+
+      border: 1px solid #c9cfd2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      color: $white;
+
+      transition: 0.3s ease;
+
+      &.active {
+        background: $primary-500;
+
+        border-color: $primary-500;
+      }
+    }
+
+    .label {
+      font-size: 15px;
+
+      color: #5f6c72;
+    }
+  }
+
+  /* DIVIDER */
+
+  .filter-divider {
+    width: 100%;
+
+    height: 1px;
+
+    background: #e4e7e9;
+
+    margin: 32px 0;
+  }
+
+  /* TAGS */
+
+  .tags-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+  }
+
+  .tag-btn {
+    height: 38px;
+
+    padding: 0 16px;
+
+    border: 1px solid #e4e7e9;
+
+    background: $white;
+
+    font-size: 14px;
+
+    color: #191c1f;
+
+    transition: 0.3s ease;
+
+    &.active {
+      border-color: $primary-500;
+
+      color: $primary-500;
+    }
+  }
+}

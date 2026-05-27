@@ -1,0 +1,363 @@
+// @use '../theme/variables' as *;
+// @use '../theme/typography' as *;
+
+// .signin-page {
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 60px 20px;
+// }
+
+// .signin-card {
+//   width: 100%;
+//   max-width: 420px;
+//   padding: 32px;
+//   background: $white;
+//   border-radius: $radius-md;
+//   box-shadow: $shadow-md;
+// }
+
+// .signin-header {
+//   display: flex;
+//   margin-bottom: 24px;
+
+//   button {
+//     flex: 1;
+//     height: 48px;
+//     border: none;
+//     background: transparent;
+//     font-size: $fs-16;
+//     font-weight: $fw-600;
+//     border-bottom: 2px solid transparent;
+//   }
+
+//   .active {
+//     color: $primary-500;
+//     border-color: $primary-500;
+//   }
+// }
+
+// .form-group {
+//   margin-bottom: 20px;
+
+//   label {
+//     display: block;
+//     margin-bottom: 8px;
+//     font-size: $fs-14;
+//   }
+
+//   input {
+//     width: 100%;
+//     height: 48px;
+//     padding: 0 16px;
+//     border: 1px solid $gray-300;
+//     border-radius: $radius-sm;
+//     outline: none;
+//   }
+// }
+
+// .signin-btn {
+//   width: 100%;
+//   height: 48px;
+//   border: none;
+//   background: $primary-500;
+//   color: $white;
+//   font-weight: $fw-600;
+//   border-radius: $radius-sm;
+//   margin-top: 10px;
+// }
+
+// .social-login {
+//   margin-top: 24px;
+
+//   button {
+//     width: 100%;
+//     height: 48px;
+//     margin-bottom: 12px;
+//     border: 1px solid $gray-300;
+//     background: transparent;
+//     border-radius: $radius-sm;
+//   }
+// }
+
+
+@use '../theme/variables' as *;
+@use '../theme/typography' as *;
+
+.signin-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20px;
+
+  background: #f2f4f5;
+}
+
+.signin-card {
+  width: 100%;
+  max-width: 424px;
+
+  background: $white;
+
+  border: 1px solid #e4e7e9;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.signin-header {
+  display: flex;
+
+  border-bottom: 1px solid #e4e7e9;
+
+  button {
+    flex: 1;
+
+    height: 72px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 32px;
+    font-weight: $fw-600;
+
+    color: #77878f;
+
+    border-bottom: 3px solid transparent;
+
+    transition: $transition;
+  }
+
+  .active {
+    color: #191c1f;
+
+    border-color: $primary-500;
+  }
+}
+
+/* ================= FORM ================= */
+
+form {
+  padding: 32px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+
+  label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: $fs-14;
+
+    color: #191c1f;
+
+    font-weight: $fw-500;
+  }
+
+  input {
+    width: 100%;
+
+    height: 50px;
+
+    border: 1px solid #e4e7e9;
+
+    border-radius: 2px;
+
+    padding: 0 16px;
+
+    outline: none;
+
+    font-size: $fs-14;
+
+    transition: $transition;
+
+    &:focus {
+      border-color: $primary-500;
+    }
+  }
+}
+
+/* ================= PASSWORD ================= */
+
+.password-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  span {
+    font-size: 14px;
+
+    color: #2da5f3;
+
+    cursor: pointer;
+  }
+}
+
+.password-input {
+  position: relative;
+
+  input {
+    padding-right: 52px;
+  }
+
+  .password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 16px;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #191c1f;
+
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ================= SIGN IN BUTTON ================= */
+
+.signin-btn {
+  width: 100%;
+
+  height: 56px;
+
+  border: none;
+
+  background: $primary-500;
+
+  border-radius: 3px;
+
+  color: $white;
+
+  font-size: 16px;
+  font-weight: $fw-700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  transition: $transition;
+
+  &:hover {
+    background: #f97316;
+  }
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+  position: relative;
+
+  margin: 0 32px 24px;
+
+  text-align: center;
+
+  span {
+    background: $white;
+
+    padding: 0 14px;
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #77878f;
+
+    font-size: 14px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 100%;
+    height: 1px;
+
+    background: #e4e7e9;
+  }
+}
+
+/* ================= SOCIAL LOGIN ================= */
+
+.social-login {
+  padding: 0 32px 32px;
+
+  button {
+    width: 100%;
+
+    height: 56px;
+
+    border: 1px solid #e4e7e9;
+
+    border-radius: 2px;
+
+    background: $white;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    position: relative;
+
+    transition: $transition;
+
+    &:hover {
+      border-color: $primary-500;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      object-fit: contain;
+
+      position: absolute;
+
+      left: 20px;
+    }
+
+    span {
+      font-size: 16px;
+
+      color: #475156;
+
+      font-weight: $fw-500;
+    }
+  }
+}
