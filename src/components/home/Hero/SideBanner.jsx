@@ -2,7 +2,7 @@ import { ArrowRight } from 'react-bootstrap-icons'
 
 import phoneImage from '../../../assets/images/Phones.webp'
 
-import budsImage from '../../../assets/images/earbuds.webp'
+import budsImage from '../../../assets/images/EarBuds.webp'
 
 export default function SideBanner() {
   return (

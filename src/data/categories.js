@@ -1,6 +1,6 @@
 import category1 from '../assets/images/Computer.webp'
 import category2 from '../assets/images/SmartPhone2.webp'
-import category3 from '../assets/images/Headphones2.webp'
+import category3 from '../assets/images/HeadPhones2.webp'
 import category4 from '../assets/images/Accessories.webp'
 import category5 from '../assets/images/Camera.webp'
 import category6 from '../assets/images/TV.webp'

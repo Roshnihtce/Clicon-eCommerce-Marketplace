@@ -1,6 +1,6 @@
 import phone from '../assets/images/SmartPhone3.webp'
 import phone2 from '../assets/images/Smartphone.webp'
-import monitor from '../assets/images/tv2.webp'
+import monitor from '../assets/images/TV2.webp'
 import headphone from '../assets/images/headphone1.webp'
 import drone from '../assets/images/Wishing.webp'
 import tv from '../assets/images/TV.webp'

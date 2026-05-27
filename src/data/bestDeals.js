@@ -1,6 +1,6 @@
 import product1 from '../assets/images/SSD.webp'
 import product2 from '../assets/images/WirelessEarphones.webp'
-import product3 from '../assets/images/SmartPhone.webp'
+import product3 from '../assets/images/Smartphone.webp'
 import product4 from '../assets/images/UHDLED.webp'
 import product5 from '../assets/images/headphone1.webp'
 import product6 from '../assets/images/Phones2.webp'
