@@ -6,7 +6,7 @@ import BrandFilter from './filters/BrandFilter'
 
 import TagFilter from './filters/TagFilter'
 
-import SidebarPromo from './promo/SidebarPromo'
+import SidebarPromo from './promo/sidebarPromo'
 
 export default function ShopSidebar() {
   return (

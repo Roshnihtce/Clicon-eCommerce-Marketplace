@@ -111,7 +111,7 @@ import {
   ArrowRight,
 } from 'react-bootstrap-icons'
 
-import googlePlay from '../../../assets/logo&icons/googlePlay.svg'
+import googlePlay from '../../../assets/logo&icons/GooglePlay.svg'
 
 import appStore from '../../../assets/logo&icons/AppleWhite.svg'
 
