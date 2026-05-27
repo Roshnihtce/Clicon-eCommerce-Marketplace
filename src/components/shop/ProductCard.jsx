@@ -11,11 +11,11 @@ import { useDispatch } from 'react-redux'
 
 import {
   addToCart,
-} from '../../../store/slices/cartSlice'
+} from '../../store/slices/cartSlice'
 
 import {
   addToWishlist,
-} from '../../../store/slices/wishlistSlice'
+} from '../../store/slices/wishlistSlice'
 
 export default function ProductCard({
   product,
