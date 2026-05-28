@@ -1,42 +1,12 @@
 @use '../theme/variables' as *;
 @use '../theme/typography' as *;
 
-// .topbar {
-//   padding: 10px 0;
-//   background: $secondary-700;
-//   color: $white;
-
-//   &-text {
-//     margin: 0;
-//     font-size: $fs-14;
-//   }
-
-//   &-right {
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-//     gap: 16px;
-
-//     select {
-//       background: transparent;
-//       border: none;
-//       color: $white;
-//       outline: none;
-//     }
-//   }
-
-//   .social-icons {
-//     display: flex;
-//     gap: 10px;
-//   }
-// }
-
-
-
-
+/* =========================
+   TOPBAR
+========================= */
 
 .topbar {
-  height: 48px;
+  min-height: 48px;
 
   background: $secondary-700;
 
@@ -44,6 +14,8 @@
 
   display: flex;
   align-items: center;
+
+  padding: 8px 0;
 }
 
 /* LEFT SIDE */
@@ -65,6 +37,8 @@
   justify-content: flex-end;
 
   gap: 28px;
+
+  flex-wrap: wrap;
 }
 
 /* FOLLOW US */
@@ -135,61 +109,17 @@
 
     padding: 0;
 
+    border: none;
+
     svg {
       font-size: 12px;
     }
   }
 }
 
-
-
-// .main-header {
-//   padding: 20px 0;
-//   background: $secondary-700;
-
-//   .logo {
-//     h2 {
-//       margin: 0;
-//       color: $white;
-//       font-weight: $fw-700;
-//     }
-//   }
-
-//   .search-box {
-//     position: relative;
-
-//     input {
-//       height: 50px;
-//       border-radius: 4px;
-//       border: none;
-//       padding-right: 50px;
-//     }
-
-//     button {
-//       position: absolute;
-//       top: 50%;
-//       right: 10px;
-//       transform: translateY(-50%);
-//       border: none;
-//       background: transparent;
-//     }
-//   }
-
-//   .header-icons {
-//     display: flex;
-//     justify-content: flex-end;
-//     gap: 16px;
-
-//     button {
-//       border: none;
-//       background: transparent;
-//       color: $white;
-//       font-size: 24px;
-//     }
-//   }
-// }
-
-
+/* =========================
+   MAIN HEADER
+========================= */
 
 .main-header {
   padding: 22px 0;
@@ -245,8 +175,10 @@
 
 .search-box {
   position: relative;
+  width: 100%;
 
   input {
+    width: 100%;
     height: 50px;
 
     border: none;
@@ -342,38 +274,47 @@
   }
 }
 
-
-
-
-
-
-
-
-
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar-section {
   padding: 16px 0;
+
   background: $white;
+
   border-bottom: 1px solid $gray-300;
 
   .nav-links {
     display: flex;
     align-items: center;
+
     gap: 24px;
+
+    flex-wrap: wrap;
 
     a {
       display: flex;
       align-items: center;
+
       gap: 6px;
+
       color: $gray-700;
+
       font-size: $fs-14;
+
+      text-decoration: none;
     }
 
     .category-btn {
       height: 40px;
+
       padding: 0 20px;
+
       border: none;
+
       background: $gray-50;
+
       border-radius: $radius-sm;
     }
   }
@@ -397,6 +338,246 @@
       height: 24px;
 
       object-fit: contain;
+    }
+  }
+}
+
+/* =========================
+   LARGE DEVICES
+========================= */
+
+@media (max-width: 1199px) {
+  .topbar-right {
+    gap: 18px;
+  }
+
+  .header-icons {
+    gap: 18px;
+
+    button svg {
+      font-size: 24px;
+    }
+  }
+
+  .logo h2 {
+    font-size: 28px;
+  }
+
+  .navbar-section {
+    .nav-links {
+      gap: 18px;
+    }
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .topbar {
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .topbar-text {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .topbar-right {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .main-header {
+    padding: 18px 0;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .search-box {
+    margin-bottom: 16px;
+  }
+
+  .header-icons {
+    justify-content: center;
+  }
+
+  .navbar-section {
+    .nav-links {
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .contact-number {
+      justify-content: center;
+      margin-top: 16px;
+    }
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+  .topbar-text {
+    font-size: 13px;
+  }
+
+  .follow-us {
+    gap: 10px;
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .topbar-select {
+    gap: 10px;
+
+    button {
+      font-size: 13px;
+    }
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .main-header {
+    padding: 16px 0;
+  }
+
+  .logo {
+    gap: 10px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+
+      min-width: 36px;
+      min-height: 36px;
+
+      font-size: 20px;
+    }
+  }
+
+  .search-box {
+    input {
+      height: 46px;
+
+      font-size: 13px;
+    }
+
+    button svg {
+      font-size: 18px;
+    }
+  }
+
+  .header-icons {
+    gap: 16px;
+
+    button svg {
+      font-size: 22px;
+    }
+  }
+
+  .navbar-section {
+    padding: 14px 0;
+
+    .nav-links {
+      gap: 12px;
+      justify-content: center;
+
+      a {
+        font-size: 13px;
+      }
+
+      .category-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .contact-number {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 575px) {
+  .topbar-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .follow-us {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .topbar-select {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  .header-icons {
+    gap: 14px;
+
+    button svg {
+      font-size: 20px;
+    }
+  }
+
+  .navbar-section {
+    .nav-links {
+      flex-direction: column;
+      align-items: stretch;
+
+      a {
+        justify-content: center;
+      }
+
+      .category-btn {
+        width: 100%;
+      }
+    }
+
+    .contact-number {
+      flex-direction: column;
+      gap: 6px;
+
+      span {
+        font-size: 15px;
+      }
     }
   }
 }

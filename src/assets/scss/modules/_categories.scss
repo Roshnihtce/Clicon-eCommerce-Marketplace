@@ -11,6 +11,7 @@
     h2 {
       font-size: 36px;
       font-weight: $fw-700;
+      margin: 0;
     }
   }
 
@@ -38,6 +39,14 @@
     align-items: center;
     justify-content: center;
 
+    border: none;
+
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
     &.left {
       left: -20px;
     }
@@ -48,6 +57,8 @@
   }
 }
 
+/* CATEGORY CARD */
+
 .category-card {
   border: 1px solid $gray-300;
 
@@ -55,13 +66,15 @@
 
   text-align: center;
 
-  padding: 12px;
+  padding: 16px;
 
   background: $white;
 
   transition: $transition;
 
   cursor: pointer;
+
+  height: 100%;
 
   &:hover {
     box-shadow: $shadow-md;
@@ -78,7 +91,9 @@
     margin-bottom: 20px;
 
     img {
+      max-width: 100%;
       max-height: 120px;
+
       object-fit: contain;
     }
   }
@@ -86,6 +101,223 @@
   h4 {
     font-size: $fs-16;
     font-weight: $fw-500;
+
     margin: 0;
+
+    line-height: 1.4;
+  }
+}
+
+/* =========================
+   LARGE DEVICES
+========================= */
+
+@media (max-width: 1199px) {
+  .shop-categories {
+    .section-title {
+      h2 {
+        font-size: 32px;
+      }
+    }
+
+    .slider-btn {
+      width: 36px;
+      height: 36px;
+
+      &.left {
+        left: -14px;
+      }
+
+      &.right {
+        right: -14px;
+      }
+    }
+  }
+
+  .category-card {
+    .category-image {
+      height: 130px;
+
+      img {
+        max-height: 110px;
+      }
+    }
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .shop-categories {
+    padding: 24px 0;
+
+    .section-title {
+      margin-bottom: 24px;
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+
+    .slider-btn {
+      width: 34px;
+      height: 34px;
+
+      &.left {
+        left: -10px;
+      }
+
+      &.right {
+        right: -10px;
+      }
+    }
+  }
+
+  .category-card {
+    padding: 14px;
+
+    .category-image {
+      height: 120px;
+
+      margin-bottom: 16px;
+
+      img {
+        max-height: 100px;
+      }
+    }
+
+    h4 {
+      font-size: 15px;
+    }
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+  .shop-categories {
+    padding: 20px 0;
+
+    .section-title {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    .slider-btn {
+      width: 32px;
+      height: 32px;
+
+      &.left {
+        left: -6px;
+      }
+
+      &.right {
+        right: -6px;
+      }
+    }
+  }
+
+  .category-card {
+    padding: 12px;
+
+    .category-image {
+      height: 100px;
+
+      margin-bottom: 14px;
+
+      img {
+        max-height: 80px;
+      }
+    }
+
+    h4 {
+      font-size: 14px;
+    }
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 575px) {
+  .shop-categories {
+    padding: 18px 0;
+
+    .section-title {
+      margin-bottom: 18px;
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .slider-btn {
+      width: 28px;
+      height: 28px;
+
+      &.left {
+        left: -2px;
+      }
+
+      &.right {
+        right: -2px;
+      }
+    }
+  }
+
+  .category-card {
+    padding: 10px;
+
+    border-radius: 10px;
+
+    .category-image {
+      height: 80px;
+
+      margin-bottom: 12px;
+
+      img {
+        max-height: 65px;
+      }
+    }
+
+    h4 {
+      font-size: 13px;
+    }
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media (max-width: 400px) {
+  .shop-categories {
+    .section-title {
+      h2 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .category-card {
+    .category-image {
+      height: 70px;
+
+      img {
+        max-height: 55px;
+      }
+    }
+
+    h4 {
+      font-size: 12px;
+    }
   }
 }
