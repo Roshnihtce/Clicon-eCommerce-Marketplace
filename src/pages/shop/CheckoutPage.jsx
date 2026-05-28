@@ -173,7 +173,7 @@ export default function CheckoutPage() {
 
                 <Button
                   className="mt-3"
-                  onClick={() => setStep(1)}
+                  onClick={() => setStep(2)}
                 >
                   Back
                 </Button>
