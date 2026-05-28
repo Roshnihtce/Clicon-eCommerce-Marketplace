@@ -14,7 +14,7 @@ import MacbookBanner from '../../components/home/Banner/MacbookBanner'
 import TopProducts from '../../components/home/Products/TopProducts'
 import LatestNews from '../../components/home/News/LatestNews'
 import Newsletter from '../../components/home/Newsletter/Newsletter'
-import ShopBreadcrumb from '../../components/shop/ShopBreadcrumb'
+// import ShopBreadcrumb from '../../components/shop/ShopBreadcrumb'
 import TopBanner from '../../components/layout/TopBanner'
 
 
@@ -23,7 +23,7 @@ export default function Dashboard() {
     <>
       <TopBanner />
       <MainLayout>
-        <ShopBreadcrumb />
+        {/* <ShopBreadcrumb /> */}
         <HeroSection />
 
 

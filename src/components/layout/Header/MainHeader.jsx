@@ -1,62 +1,6 @@
-// import { Container, Row, Col, Form } from 'react-bootstrap'
-
-// import {
-//   Cart3,
-//   Heart,
-//   Person,
-//   Search,
-// } from 'react-bootstrap-icons'
-
-// export default function MainHeader() {
-//   return (
-//     <div className="main-header">
-//       <Container>
-//         <Row className="align-items-center">
-//           <Col lg={2}>
-//             <div className="logo">
-//               <h2>CLICON</h2>
-//             </div>
-//           </Col>
-
-//           <Col lg={7}>
-//             <div className="search-box">
-//               <Form.Control
-//                 type="text"
-//                 placeholder="Search for anything..."
-//               />
-
-//               <button>
-//                 <Search />
-//               </button>
-//             </div>
-//           </Col>
-
-//           <Col lg={3}>
-//             <div className="header-icons">
-//               <button>
-//                 <Cart3 />
-//               </button>
-
-//               <button>
-//                 <Heart />
-//               </button>
-
-//               <button>
-//                 <Person />
-//               </button>
-//             </div>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   )
-// }
-
-
-
-
-
 import { Container, Row, Col, Form } from 'react-bootstrap'
+import { Link, useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 
 import {
   Cart3,
@@ -65,63 +9,92 @@ import {
   Search,
 } from 'react-bootstrap-icons'
 
+import { setSearch } from '../../../store/slices/filterSlice'
+
 export default function MainHeader() {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const cartItems = useSelector(
+    (state) => state.cart.cartItems
+  )
+
+  const wishlistItems = useSelector(
+    (state) => state.wishlist.wishlistItems
+  )
+
+  const search = useSelector(
+    (state) => state.filters.search
+  )
+
+  const handleSearch = () => {
+    navigate('/shop')
+  }
+
   return (
     <div className="main-header">
       <Container>
         <Row className="align-items-center">
-          {/* LOGO */}
 
+          {/* LOGO (FIXED ROUTE) */}
           <Col lg={2}>
-            <div className="logo">
-              <div className="logo-circle">
-                O
-              </div>
-
+            <Link
+              to="/dashboard"
+              className="logo text-decoration-none"
+            >
+              <div className="logo-circle">O</div>
               <h2>CLICON</h2>
-            </div>
+            </Link>
           </Col>
 
-          {/* SEARCH */}
-
+          {/* SEARCH (FIXED + WORKING) */}
           <Col lg={7}>
             <div className="search-box">
               <Form.Control
                 type="text"
                 placeholder="Search for anything..."
+                value={search}
+                onChange={(e) =>
+                  dispatch(setSearch(e.target.value))
+                }
               />
 
-              <button>
+              <button onClick={handleSearch}>
                 <Search />
               </button>
             </div>
           </Col>
 
           {/* ICONS */}
-
           <Col lg={3}>
             <div className="header-icons">
+
               {/* CART */}
+              <Link to="/cart">
+                <button className="cart-btn">
+                  <Cart3 />
+                  <span>{cartItems.length}</span>
+                </button>
+              </Link>
 
-              <button className="cart-btn">
-                <Cart3 />
-
-                <span>2</span>
-              </button>
-
-              {/* HEART */}
-
-              <button>
-                <Heart />
-              </button>
+              {/* WISHLIST */}
+              <Link to="/wishlist">
+                <button>
+                  <Heart />
+                  <span>{wishlistItems.length}</span>
+                </button>
+              </Link>
 
               {/* USER */}
+              <Link to="/dashboard">
+                <button>
+                  <Person />
+                </button>
+              </Link>
 
-              <button>
-                <Person />
-              </button>
             </div>
           </Col>
+
         </Row>
       </Container>
     </div>

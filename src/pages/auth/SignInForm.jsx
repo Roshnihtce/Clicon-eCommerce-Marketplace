@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Eye,
   EyeSlash,
- ArrowRight,
+  ArrowRight,
 } from 'react-bootstrap-icons'
 
 import googleIcon from '../../assets/logo&icons/Google.svg'
@@ -34,6 +34,35 @@ export default function SignInForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    const defaultUser = {
+      email: 'admin@gmail.com',
+      password: 'admin123',
+      name: 'Admin',
+    }
+
+
+    // CHECK DEFAULT USER
+    if (
+      formData.email === defaultUser.email &&
+      formData.password === defaultUser.password
+    ) {
+      sessionStorage.setItem(
+        'isLogin',
+        JSON.stringify(true)
+      )
+
+      sessionStorage.setItem(
+        'currentUser',
+        JSON.stringify(defaultUser)
+      )
+
+      alert('Login Successful')
+
+      navigate('/dashboard')
+
+      return
+    }
 
     const storedUser = JSON.parse(
       localStorage.getItem('user')

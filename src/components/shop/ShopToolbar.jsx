@@ -1,61 +1,98 @@
+import { useDispatch, useSelector } from 'react-redux'
 import { Form } from 'react-bootstrap'
-
 import { Search } from 'react-bootstrap-icons'
+import { setSearch, setSort, clearFilters } from '../../store/slices/filterSlice'
 
 export default function ShopToolbar() {
+  const dispatch = useDispatch()
+
+  const filters = useSelector((state) => state.filters)
+
+  const activeFilters = []
+
+  if (filters.category !== 'All') activeFilters.push(filters.category)
+  if (filters.tag) activeFilters.push(filters.tag)
+  if (filters.brand.length) activeFilters.push(...filters.brand)
+
   return (
-    <div className="shop-toolbar">
-      {/* TOP */}
+    <div className="shop-toolbar p-3 bg-white rounded shadow-sm">
 
-      <div className="shop-toolbar-top">
+      {/* TOP BAR */}
+      <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
         {/* SEARCH */}
-
-        <div className="toolbar-search">
+        <div className="position-relative flex-grow-1">
           <Form.Control
             type="text"
-            placeholder="Search for anything..."
-            className="shadow-none"
+            placeholder="Search products..."
+            value={filters.search}
+            onChange={(e) =>
+              dispatch(setSearch(e.target.value))
+            }
           />
 
-          <Search className="search-icon" />
+          <Search
+            style={{
+              position: 'absolute',
+              right: 10,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              opacity: 0.5,
+            }}
+          />
         </div>
 
         {/* SORT */}
+        <div className="d-flex align-items-center gap-2">
+          <span>Sort:</span>
 
-        <div className="toolbar-sort">
-          <span>Sort by:</span>
-
-          <Form.Select className="shadow-none">
-            <option>
-              Most Popular
-            </option>
-
-            <option>Newest</option>
+          <Form.Select
+            value={filters.sort}
+            onChange={(e) =>
+              dispatch(setSort(e.target.value))
+            }
+          >
+            <option value="popular">Most Popular</option>
+            <option value="newest">Newest</option>
+            <option value="low">Price: Low → High</option>
+            <option value="high">Price: High → Low</option>
           </Form.Select>
         </div>
+
       </div>
 
-      {/* FILTER BAR */}
+      {/* ACTIVE FILTERS */}
+      <div className="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
 
-      <div className="active-filters">
-        <div className="filters-left">
-          <span className="filter-title">
-            Active Filters:
-          </span>
+        <div className="d-flex flex-wrap gap-2 align-items-center">
 
-          <button>
-            Electronics Devices ✕
-          </button>
+          <span className="fw-bold">Active Filters:</span>
 
-          <button>
-            5 Star Rating ✕
-          </button>
+          {activeFilters.length === 0 ? (
+            <span className="text-muted">None</span>
+          ) : (
+            activeFilters.map((item, i) => (
+              <button
+                key={i}
+                className="btn btn-sm btn-outline-dark"
+                onClick={() => dispatch(clearFilters())}
+              >
+                {item} ✕
+              </button>
+            ))
+          )}
+
         </div>
 
-        <div className="filters-result">
-          <strong>65,867</strong> Results found.
-        </div>
+        <button
+          className="btn btn-sm btn-danger"
+          onClick={() => dispatch(clearFilters())}
+        >
+          Clear All
+        </button>
+
       </div>
+
     </div>
   )
 }
