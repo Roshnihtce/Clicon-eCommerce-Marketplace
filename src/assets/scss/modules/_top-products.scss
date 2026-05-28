@@ -72,21 +72,27 @@
     .product-content {
       flex: 1;
 
-      h6 {
-        font-size: 15px;
-        line-height: 24px;
+     h6 {
+  font-size: 15px;
 
-        color: #191c1f;
+  line-height: 24px;
 
-        margin-bottom: 10px;
+  color: #191c1f;
 
-        display: -webkit-box;
+  margin-bottom: 10px;
 
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
+  overflow: hidden;
 
-        overflow: hidden;
-      }
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 2;
+
+  min-height: 48px;
+}
 
       span {
         color: #2da5f3;

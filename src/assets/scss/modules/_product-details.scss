@@ -714,3 +714,15 @@
     margin-top: 48px;
   }
 }
+
+@media (max-width: 576px) {
+  .details-actions {
+    flex-direction: column;
+  }
+
+  .buy-btn,
+  .add-cart-btn,
+  .quantity-box {
+    width: 100%;
+  }
+}
