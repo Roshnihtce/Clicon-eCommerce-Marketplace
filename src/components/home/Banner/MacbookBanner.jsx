@@ -20,7 +20,7 @@ export default function MacbookBanner() {
 
             <p>
               Apple M1 Max Chip.
-              32GB Unified <span class="d-block"> Memory,
+              32GB Unified <span className="d-block"> Memory,
               1TB SSD Storage</span>
             </p>
 
