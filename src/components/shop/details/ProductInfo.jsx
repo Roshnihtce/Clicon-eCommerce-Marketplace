@@ -5,6 +5,7 @@ import {
   Cart3,
 } from 'react-bootstrap-icons'
 
+
 import {
   Row,
   Col,
@@ -16,6 +17,7 @@ import { useDispatch } from 'react-redux'
 import {
   addToWishlist,
 } from '../../../store/slices/wishlistSlice'
+import paymentImage from '../../../assets/images/payment-method.webp'
 
 export default function ProductInfo({
   product,
@@ -233,7 +235,7 @@ export default function ProductInfo({
         </p>
 
         <img
-          src="https://i.imgur.com/6f8K0Qp.png"
+          src={paymentImage}
           alt="payment"
         />
       </div>
